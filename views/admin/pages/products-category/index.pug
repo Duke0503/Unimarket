@@ -22,11 +22,11 @@ block main
             .col-8
               if(role.permissions.includes("products-category_edit"))
                 +form-change-multi(`${prefixAdmin}/products-category/change-multi?_method=PATCH`)
-            .col-4
+            .col-4.d-flex.flex-column.justify-content-start.align-items-end
               if(role.permissions.includes("products-category_create"))
                 a(
                   href=`${prefixAdmin}/products-category/create`
-                  class="btn btn-outline-success"
+                  class="btn btn-outline-primary"
                 ) + Thêm mới
 
           table(
